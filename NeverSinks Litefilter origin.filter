@@ -15,34 +15,6 @@
 #--------------------------
 # Overrides - Uniques, Valuables
 #--------------------------
-Hide
-AreaLevel > 65
-BaseType == "Orb of Transmutation" "Orb of Augmentation"
-
-
-# S티어 유니크
-# 유니크 추가방법 = 유니크 템 이름 2줄중에 아랫줄을 BaseType 옆에 입력. ex) 헤드헌터 무거운 허리띠 = "무거운 허리띠" 입력
-# 같은 이름을 쓰는 중복 유니크가 있는 경우도 있음. ex) 무거운 허리띠 = 헤드헌터, 제르피의 시원 2종류 다 같은 사운드필터 적용됨
-Show
-Rarity Unique
-BaseType "Ultimate Life Flask" "Ultimate Mana Flask" "Silk Robe" "Stellar Amulet" "Heavy Belt" "Ornate Belt" "Grand Regalia" "Grand Visage" "Utility Belt" "Furtive Wraps" "Stone Tower Shield" "Crucible Tower Shield" "Gold Amulet" "Sapphire Ring" "Emerald Ring" "Smuggler Coat"
-SetTextColor 255 255 255 255
-SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35
-PlayEffect White
-MinimapIcon 1 White Circle
-SetFontSize 45
-
-# A티어 유니크
-Show
-Rarity Unique
-BaseType "Omen Crest Shield" "Amethyst Ring" "Altar Robe" "Explorer Armour" "Knight Armour" "Felt Cap" "Armoured Cap" "Closed Helm" "Tribal Mask" "Moulded Mitts" "Fine Bracers" "Burnished Gauntlets" "Linen Wraps" "Conqueror Plate"
-SetTextColor 255 255 255 255
-SetBorderColor 255 255 255 255
-SetBackgroundColor 240 90 35
-PlayEffect White
-MinimapIcon 1 White Circle
-SetFontSize 40
 
 Show
 Rarity Unique
@@ -109,7 +81,6 @@ SetBackgroundColor 0 0 0 180
 
 # Always make Spirit gems pop
 Show
-AreaLevel <= 78
 BaseType "Uncut Spirit Gem"
 SetTextColor 20 240 240
 SetBorderColor 20 240 240
@@ -142,7 +113,6 @@ SetFontSize 40
 
 # Gems up to level 18 in maps don't get a special highlight
 Show
-AreaLevel <= 78
 ItemLevel <= 18
 BaseType "Uncut Skill Gem"
 SetTextColor 20 240 240
@@ -155,58 +125,14 @@ SetTextColor 20 240 240
 SetBorderColor 20 240 240
 SetFontSize 35
 
-Hide
-AreaLevel > 78
-ItemLevel <= 18
-BaseType "Uncut Skill Gem"
-
-Hide
-AreaLevel > 78
-ItemLevel <= 18
-BaseType "Uncut Spirit Gem"
-
 # Level 19 gems and up in maps get a special highlight
 Show
-ItemLevel == 19
 BaseType "Uncut Skill Gem"
 SetTextColor 20 240 240
 SetBorderColor 20 240 240
 PlayAlertSound 2 300
 PlayEffect Cyan
 MinimapIcon 1 Cyan Triangle
-SetFontSize 40
-
-# Level 19 gems and up in maps get a special highlight
-Show
-ItemLevel == 19
-BaseType "Uncut Spirit Gem"
-SetTextColor 20 240 240
-SetBorderColor 20 240 240
-PlayAlertSound 2 300
-PlayEffect Cyan
-MinimapIcon 1 Cyan Triangle
-SetFontSize 40
-
-# Level 20 gems and up in maps get a special highlight
-Show
-ItemLevel >= 20
-BaseType "Uncut Spirit Gem"
-SetTextColor 20 240 240
-SetBorderColor 20 240 240
-PlayAlertSound 6 300
-PlayEffect Red
-MinimapIcon 1 Cyan Star
-SetFontSize 40
-
-# Always make Spirit gems pop
-Show
-ItemLevel >= 20
-BaseType "Uncut Spirit Gem"
-SetTextColor 20 240 240
-SetBorderColor 20 240 240
-PlayAlertSound 6 300
-PlayEffect Red
-MinimapIcon 1 Cyan Star
 SetFontSize 40
 
 #--------------------------
@@ -435,60 +361,33 @@ SetFontSize 40
 # Waystones
 #--------------------------
 
-Hide
-WaystoneTier < 14
-AreaLevel > 78
+Show
+WaystoneTier < 10
+AreaLevel > 77
 BaseType "Waystone"
 Rarity <= Rare
+SetTextColor 255 255 255
+SetBorderColor 255 255 255
+SetFontSize 35
 
 Show
-WaystoneTier == 14
-AreaLevel >= 79
+WaystoneTier < 5
+AreaLevel > 74
 BaseType "Waystone"
 Rarity <= Rare
+SetTextColor 255 255 255
+SetBorderColor 255 255 255
+SetFontSize 35
 
 Show
-WaystoneTier >= 15
-AreaLevel >= 79
 BaseType "Waystone"
 Rarity <= Rare
+SetTextColor 255 255 255
 SetBorderColor 255 255 255
 PlayAlertSound 4 300
 PlayEffect White
 MinimapIcon 1 White Square
 SetFontSize 40
-
-Show
-WaystoneTier > 5
-AreaLevel < 79
-BaseType "Waystone"
-Rarity <= Rare
-SetBorderColor 255 255 255
-PlayAlertSound 4 300
-PlayEffect White
-MinimapIcon 1 White Square
-SetFontSize 40
-
-Show
-WaystoneTier > 0
-AreaLevel < 74
-BaseType "Waystone"
-Rarity <= Rare
-SetBorderColor 255 255 255
-PlayAlertSound 4 300
-PlayEffect White
-MinimapIcon 1 White Square
-SetFontSize 40
-
-# Show
-# BaseType "Waystone"
-# Rarity <= Rare
-# SetTextColor 255 255 255
-# SetBorderColor 255 255 255
-# PlayAlertSound 4 300
-# PlayEffect White
-# MinimapIcon 1 White Square
-# SetFontSize 40
 
 #--------------------------
 # Value Rares
@@ -551,15 +450,11 @@ SetFontSize 35
 
 ## Uncomment this rule to hide low level rares in high level zones
 
-Hide
-Rarity Rare
-DropLevel < 60
-AreaLevel > 78
-
-Hide
-Rarity Rare
-DropLevel < 50
-AreaLevel > 72
+# Hide
+# Rarity Rare
+# DropLevel < 50
+# AreaLevel > 72
+# SetFontSize 35
 
 Show
 Rarity Rare
@@ -578,7 +473,8 @@ Class "Flasks"
 Hide
 AreaLevel >= 78
 Rarity <= Magic
-Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "Quivers" "One Hand Maces" "Two Hand Maces" "Staves" "Quarterstaves" "Bows" "Crossbows" "Wands" "Sceptres"
+DropLevel < 65
+Class "Body Armours" "Helmets" "Boots" "Gloves" "Shields" "Foci" "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Bows" "Crossbows"
 
 Hide
 AreaLevel > 75

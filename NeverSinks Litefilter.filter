@@ -195,7 +195,7 @@ SetTextColor 20 240 240
 SetBorderColor 20 240 240
 PlayAlertSound 6 300
 PlayEffect Red
-MinimapIcon 1 Cyan Star
+MinimapIcon 1 Red Star
 SetFontSize 40
 
 # Always make Spirit gems pop
@@ -206,7 +206,7 @@ SetTextColor 20 240 240
 SetBorderColor 20 240 240
 PlayAlertSound 6 300
 PlayEffect Red
-MinimapIcon 1 Cyan Star
+MinimapIcon 1 Red Star
 SetFontSize 40
 
 #--------------------------
